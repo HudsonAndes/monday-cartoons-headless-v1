@@ -145,9 +145,22 @@ function CartLineRemoveButton({lineIds, disabled}) {
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{lineIds}}
     >
-      <button disabled={disabled} type="submit">
+              Remove
+      <button disabled={disabled} type="submit" style={{
+        background: 'transparent',
+        border: '1px solid #2a2823',
+        color: '#8a8578',
+        padding: '6px 14px',
+        fontSize: '11px',
+        letterSpacing: '1.5px',
+        textTransform: 'uppercase',
+        cursor: 'pointer',
+        fontFamily: "'DM Sans', sans-serif",
+        whiteSpace: 'nowrap',
+      }}>
         Remove
       </button>
+
     </CartForm>
   );
 }

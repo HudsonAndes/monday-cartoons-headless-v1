@@ -13,8 +13,12 @@ import favicon from '~/assets/favicon.svg';
 import {FOOTER_QUERY, HEADER_QUERY} from '~/lib/fragments';
 import resetStyles from '~/styles/reset.css?url';
 import appStyles from '~/styles/app.css?url';
+import mcStyles from '~/styles/monday-cartoons.css?url';
 import tailwindCss from './styles/tailwind.css?url';
 import {PageLayout} from './components/PageLayout';
+import {Marquee} from '~/components/Marquee';
+import {CustomCursor} from '~/components/CustomCursor';
+import {MCFooter} from '~/components/Sections';
 
 /**
  * This is important to avoid re-fetching root queries on sub-navigations
@@ -154,7 +158,11 @@ export function Layout({children}) {
         <link rel="stylesheet" href={tailwindCss}></link>
         <link rel="stylesheet" href={resetStyles}></link>
         <link rel="stylesheet" href={appStyles}></link>
-        <Meta />
+        <link rel="stylesheet" href={mcStyles}></link>
+  	<link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" />
+	<Meta />
         <Links />
       </head>
       <body>
@@ -180,9 +188,11 @@ export default function App() {
       shop={data.shop}
       consent={data.consent}
     >
+      <Marquee />
       <PageLayout {...data}>
         <Outlet />
       </PageLayout>
+      <MCFooter />
     </Analytics.Provider>
   );
 }
