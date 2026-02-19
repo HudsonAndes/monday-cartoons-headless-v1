@@ -9,7 +9,8 @@ import {useAside} from './Aside';
  * It also provides controls to update the quantity or remove the line item.
  * If the line is a parent line that has child components (like warranties or gift wrapping), they are
  * rendered nested below the parent line.
- * @param {{
+  *   lineIds: string[];
+ *   disabled: boolean;* @param {{
  *   layout: CartLayout;
  *   line: CartLine;
  *   childrenMap: LineItemChildrenMap;
@@ -132,7 +133,8 @@ function CartLineQuantity({line}) {
  * A button that removes a line item from the cart. It is disabled
  * when the line item is new, and the server hasn't yet responded
  * that it was successfully added to the cart.
- * @param {{
+
+* @param {{
  *   lineIds: string[];
  *   disabled: boolean;
  * }}
@@ -145,22 +147,21 @@ function CartLineRemoveButton({lineIds, disabled}) {
       action={CartForm.ACTIONS.LinesRemove}
       inputs={{lineIds}}
     >
-              Remove
       <button disabled={disabled} type="submit" style={{
         background: 'transparent',
-        border: '1px solid #2a2823',
+        border: 'none',
         color: '#8a8578',
-        padding: '6px 14px',
-        fontSize: '11px',
-        letterSpacing: '1.5px',
+        padding: '4px 0',
+        fontSize: '12px',
+        letterSpacing: '1px',
         textTransform: 'uppercase',
         cursor: 'pointer',
+        textDecoration: 'underline',
+        textUnderlineOffset: '3px',
         fontFamily: "'DM Sans', sans-serif",
-        whiteSpace: 'nowrap',
       }}>
         Remove
       </button>
-
     </CartForm>
   );
 }

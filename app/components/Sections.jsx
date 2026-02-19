@@ -4,7 +4,7 @@ import {useInView} from '~/lib/utils';
 
 export function StorySection() {
   const [ref, isVisible] = useInView({threshold: 0.2});
-  const values = ['Sustainable Materials', 'NYC Designed', 'Premium Craft', 'Play First'];
+  const values = ['Sustainable Materials', 'NYC Designed', 'Premium Craft'];
 
   return (
     <section id="story" ref={ref} className="mc-story">
@@ -19,11 +19,6 @@ export function StorySection() {
           <p className={`mc-story-text ${isVisible ? 'mc-visible' : ''}`} style={{transitionDelay: '300ms'}}>
             Monday Cartoons is a lifestyle brand combining art, fashion, and a
             balance of playful creativity with determined craftsmanship.
-          </p>
-          <p className={`mc-story-text ${isVisible ? 'mc-visible' : ''}`} style={{transitionDelay: '400ms'}}>
-            We found the finest and most sustainable cotton in the world, and
-            made pieces you will love — designed to bring the spirit of play to
-            everything you do.
           </p>
           <div className="mc-story-values">
             {values.map((v, i) => (

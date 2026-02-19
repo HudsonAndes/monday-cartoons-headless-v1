@@ -188,6 +188,7 @@ export default function App() {
       shop={data.shop}
       consent={data.consent}
     >
+      <CustomCursor />
       <Marquee />
       <PageLayout {...data}>
         <Outlet />

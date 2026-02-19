@@ -1,7 +1,7 @@
 :root {
   --aside-width: 400px;
-  --cart-aside-summary-height-with-discount: 300px;
-  --cart-aside-summary-height: 250px;
+  --cart-aside-summary-height-with-discount: 380px;
+  --cart-aside-summary-height: 340px;
   --grid-item-width: 355px;
   --header-height: 64px;
   --color-dark: #000;
@@ -103,7 +103,7 @@ aside li {
 }
 
 .overlay {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.5);
   bottom: 0;
   left: 0;
   opacity: 0;
@@ -114,7 +114,7 @@ aside li {
   transition: opacity 400ms ease-in-out;
   transition: opacity 400ms;
   visibility: hidden;
-  z-index: 10;
+  z-index: 100;
 }
 
 .overlay .close-outside {

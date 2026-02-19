@@ -36,11 +36,29 @@ function CartCheckoutActions({checkoutUrl}) {
   if (!checkoutUrl) return null;
 
   return (
-    <div>
-      <a href={checkoutUrl} target="_self">
-        <p>Continue to Checkout &rarr;</p>
+    <div style={{marginTop: '16px'}}>
+      <a
+        href={checkoutUrl}
+        target="_self"
+        style={{
+          display: 'block',
+          width: '100%',
+          background: '#d4440f',
+          color: 'white',
+          textAlign: 'center',
+          padding: '16px 24px',
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '2px',
+          textTransform: 'uppercase',
+          textDecoration: 'none',
+          fontFamily: "'DM Sans', sans-serif",
+          boxSizing: 'border-box',
+          transition: 'filter 0.3s',
+        }}
+      >
+        Continue to Checkout →
       </a>
-      <br />
     </div>
   );
 }
@@ -76,7 +94,7 @@ function CartDiscounts({discountCodes}) {
 
       {/* Show an input to apply a discount */}
       <UpdateDiscountForm discountCodes={codes}>
-        <div>
+        <div style={{display: 'flex', gap: '8px', alignItems: 'stretch', marginBottom: '8px'}}>
           <label htmlFor="discount-code-input" className="sr-only">
             Discount code
           </label>
@@ -85,9 +103,32 @@ function CartDiscounts({discountCodes}) {
             type="text"
             name="discountCode"
             placeholder="Discount code"
+            style={{
+              flex: 1,
+              padding: '10px 12px',
+              fontSize: '14px',
+              border: '1px solid #d1d5db',
+              borderRadius: '4px',
+              minWidth: 0,
+            }}
           />
-          &nbsp;
-          <button type="submit" aria-label="Apply discount code">
+          <button
+            type="submit"
+            aria-label="Apply discount code"
+            style={{
+              padding: '10px 16px',
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              background: '#222',
+              color: 'white',
+              border: 'none',
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
+              fontFamily: "'DM Sans', sans-serif",
+            }}
+          >
             Apply
           </button>
         </div>
@@ -151,15 +192,38 @@ function CartGiftCard({giftCardCodes}) {
       )}
 
       <AddGiftCardForm fetcherKey="gift-card-add">
-        <div>
+        <div style={{display: 'flex', gap: '8px', alignItems: 'stretch', marginBottom: '8px'}}>
           <input
             type="text"
             name="giftCardCode"
             placeholder="Gift card code"
             ref={giftCardCodeInput}
+            style={{
+              flex: 1,
+              padding: '10px 12px',
+              fontSize: '14px',
+              border: '1px solid #d1d5db',
+              borderRadius: '4px',
+              minWidth: 0,
+            }}
           />
-          &nbsp;
-          <button type="submit" disabled={giftCardAddFetcher.state !== 'idle'}>
+          <button
+            type="submit"
+            disabled={giftCardAddFetcher.state !== 'idle'}
+            style={{
+              padding: '10px 16px',
+              fontSize: '11px',
+              fontWeight: 600,
+              letterSpacing: '1.5px',
+              textTransform: 'uppercase',
+              background: '#222',
+              color: 'white',
+              border: 'none',
+              cursor: 'pointer',
+              whiteSpace: 'nowrap',
+              fontFamily: "'DM Sans', sans-serif",
+            }}
+          >
             Apply
           </button>
         </div>

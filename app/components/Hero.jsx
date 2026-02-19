@@ -18,7 +18,7 @@ export function Hero({featuredProduct}) {
       <div
         className={`mc-hero-copy ${loaded ? 'mc-visible' : ''}`}
       >
-        <div className="mc-hero-est">EST. NEW YORK CITY</div>
+        <div className="mc-hero-est">EST. 2024. NEW YORK CITY</div>
 
         <h1 className="mc-hero-title">
           <span className="mc-hero-play">Play</span>
@@ -27,8 +27,8 @@ export function Hero({featuredProduct}) {
         </h1>
 
         <p className="mc-hero-desc">
-          Art, fashion &amp; a spirit of play — crafted with the finest
-          sustainable cotton on earth.
+          Art, fashion &amp; the spirit of play. Crafted with the finest
+          finest fabrics and materials on earth.
         </p>
 
         <Link to="/collections/all" className="mc-hero-cta">
