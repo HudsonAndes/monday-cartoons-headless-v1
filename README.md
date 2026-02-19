@@ -8,7 +8,7 @@ This is a fully functional e-commerce storefront built from the ground up using 
 
 The storefront pulls real product data from the Monday Cartoons Shopify store via the Storefront API, handles cart operations, and routes to Shopify's native checkout.
 
-**NOTE**: Since this is only a proof of concept, quick design decisions where made. 
+**NOTE**: Since this is only a proof of concept, quick design decisions were made. 
 
 ## What I Built
 
